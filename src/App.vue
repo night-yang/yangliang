@@ -17,6 +17,7 @@ export default {
   },
   created: function () {
     this.$store.dispatch({ type: 'loadBlog' })
+    this.$store.dispatch({ type: 'loadcv' })
   }
 }
 </script>

@@ -8,8 +8,7 @@
 				<h2>Kimberly Thompson</h2>
 				<p>Web Designer</p>
 			</div>
-			<div class="main-grid3">
-				
+			<div class="main-grid3">			
 					<div class="bar">
 						<p>UX/UX</p>
 					</div>
@@ -38,7 +37,6 @@
 				</ul>
 				<p>Nemo enim ipsam volup sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 			</div>
-            <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
 			<div class="facebook">
 					<ul>
 						<li><a class="icon1" href="#"></a></li>
