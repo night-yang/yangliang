@@ -1,5 +1,4 @@
-{
-  "blogs": [
+ [
     {
       "id": "1",
       "title": "我的第一篇博客",
@@ -8,12 +7,11 @@
     {
       "id": "2",
       "title": "我的第二篇博客" ,
-      "bodu":"dasffdgscvadfffffq"
+      "body":"dasffdgscvadfffffq"
     },
     {
       "id": "3",
       "title": "我的第三篇博客",
-      "bodu": "dasffdgscvadfffffq"
+      "body": "dasffdgscvadfffffq"
     }
   ]
-}
