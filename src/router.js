@@ -5,7 +5,7 @@ import Blog from '@/components/Blog'
 import Blogcontent from '@/components/Blogcontent'
 import BlogList from '@/components/BlogList'
 import CV from '@/components/CV'
-import pic from '@/components/Pic'
+import ga from '@/components/ga'
 import note from '@/components/Note'
 Vue.use(Router)
 
@@ -22,7 +22,11 @@ export default new Router({
     },
     {
       path:'/ga',
-      component:pic,
+      component:ga,
+    },
+    {
+      path: '/ga/:id',
+      component: ga
     },
     {
       path: '/note',

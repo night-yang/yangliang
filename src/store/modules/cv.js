@@ -8,10 +8,10 @@ const mutations = {
   }
 }
 const actions = {
-  loadBlog({ commit }) {
+  loadcv({ commit }) {
     axios.get('https://raw.githubusercontent.com/night-yang/yangliang/master/data/cv.json').then(
       res => {
-        let cv = res.data
+        let cv = res.data[0]
         console.log(cv)
         commit('loadcv', cv)
       }

@@ -1,64 +1,155 @@
 <template>
-  <div class="cv">
-	<div class="main">
-		<h1>Mini Profile Widget</h1>
-		<div class="content">
-			<div class="profile">
-				<img src="images/pic1.png" alt=" " />
-				<h2>Kimberly Thompson</h2>
-				<p>Web Designer</p>
-			</div>
-			<div class="main-grid3">			
-					<div class="bar">
-						<p>UX/UX</p>
-					</div>
-				<div class="skills">
-					 <div class="skill1" style="width:100%"> </div>							
-				</div>
-					<div class="bar">
-						<p>HTML / CSS3 / SASS</p>
-					</div>
-				<div class="skills">
-					 <div class="skill2" style="width:90%"> </div>							
-				</div>
-					<div class="bar">
-						<p>JAVASCRIPT</p>
-					</div>
-				<div class="skills">
-					 <div class="skill3" style="width:75%"> </div>							
-				</div>
-			</div>
-			<div class="favourites">
-				<ul>
-					<li><a class="eye" href="#">22312</a></li>
-					<li><a class="video" href="#">331</a></li>
-					<li><a  class="favou" href="#">1352</a></li>
-					<div class="clear"></div>
-				</ul>
-				<p>Nemo enim ipsam volup sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-			</div>
-			<div class="facebook">
-					<ul>
-						<li><a class="icon1" href="#"></a></li>
-						<li><a class="icon2" href="#"></a></li>
-						<li><a class="icon3" href="#"></a></li>
-						<li><a class="icon4" href="#"></a></li>
-						<li><a class="icon5" href="#"></a></li>	
-					</ul>
-			</div>
-			<div class="follow">
-				<a href="#">follow</a>
-			</div>
-		</div>
-	</div>
+  <div class="wp">
+      <div class="body">
+          <div class="left">
+            <img src="../assets/touxiang.jpg" alt="">
+            <h1 v-if="cv">姓名：{{ cv.name }}</h1>
+            <h2>电话：{{ cv.phone }}</h2>
+            
 
+          </div>
+          <div class="min">
+              <i><svg t="1525944503197" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2903" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"><defs></defs><path d="M353.167017 957.688735c-72.428589 0-140.522454-28.204365-191.738929-79.432097l-8.908904-8.909927c-105.721857-105.708554-105.721857-277.747815 0-383.469672l190.747345-190.747345c51.203172-51.215452 119.297037-79.420841 191.725626-79.420841s140.522454 28.204365 191.738929 79.420841l8.90788 8.90788c105.721857 105.72288 105.721857 277.753955 0 383.478881L544.904922 878.256638C493.689471 929.48437 425.595606 957.688735 353.167017 957.688735zM534.993179 269.845845c-57.95597 0-112.463398 22.574135-153.448858 63.560618L190.796976 524.153808c-84.615143 84.616166-84.615143 222.303039 0 306.917158l8.90788 8.90788c40.98546 40.999786 95.492888 63.574944 153.462161 63.574944s112.463398-22.575158 153.462161-63.574944l190.735066-190.740182c84.615143-84.615143 84.615143-222.309178 0-306.924321l-8.90788-8.90788C647.469879 292.419979 592.962451 269.845845 534.993179 269.845845z" p-id="2904" fill="#707070"></path><path d="M198.105429 767.154237c-4.282536 0-8.498558-2.034333-11.128455-5.842055-51.202149-73.849962-36.941354-152.914692 41.237193-228.646514l42.49279-42.479487c5.2864-5.2864 13.851473-5.2864 19.137873 0 5.287423 5.287423 5.287423 13.851473 0 19.138896l-42.638099 42.638099c-68.503187 66.349127-81.231069 131.549082-37.985126 193.938014 4.25593 6.133697 2.723018 14.56574-3.41068 18.847254C203.458343 766.360152 200.761931 767.154237 198.105429 767.154237z" p-id="2905" fill="#707070"></path><path d="M230.408135 806.6733c-3.462868 0-6.925736-1.323135-9.555633-3.965312l-6.317892-6.291287c-5.2864-5.2864-5.2864-13.850449-0.013303-19.136849 5.287423-5.288446 13.864776-5.288446 19.137873 0l6.317892 6.28924c5.287423 5.2864 5.287423 13.852496 0.013303 19.138896C237.346151 805.350165 233.86998 806.6733 230.408135 806.6733z" p-id="2906" fill="#707070"></path><path d="M685.720042 712.673415c-2.062985 0-4.16281-0.475837-6.133697-1.453095-264.603447-134.726447-356.672352-351.84337-360.465748-361.015264-2.841721-6.912433 0.435928-14.81645 7.335059-17.671475 6.89913-2.868327 14.81645 0.422625 17.683754 7.321756 0.898463 2.167363 92.452645 217.260186 347.738889 347.222119 6.6607 3.397377 9.304923 11.552104 5.92085 18.219967C695.406658 709.977004 690.649308 712.673415 685.720042 712.673415z" p-id="2907" fill="#707070"></path><path d="M534.993179 499.755118c-3.462868 0-6.92676-1.322112-9.568936-3.965312-5.287423-5.287423-5.287423-13.851473 0-19.137873l47.857984-47.872311c5.287423-5.287423 13.852496-5.287423 19.138896 0s5.2864 13.851473 0 19.137873l-47.860031 47.872311C541.918915 498.433006 538.455023 499.755118 534.993179 499.755118z" p-id="2908" fill="#707070"></path><path d="M724.655819 358.835621c-13.996782 0-25.839505-10.771321-26.963095-24.953322-0.277316-3.555989-5.483898-87.959308 113.744577-146.629545 62.833047-30.901801 83.717703-102.563934 83.915201-103.290481 4.071735-14.367219 19.044752-22.707165 33.411971-18.688641 14.380522 4.070712 22.747073 19.019169 18.688641 33.411971-1.095961 3.885494-27.887141 95.716992-112.118544 137.152706-85.262896 41.950438-83.703377 93.298919-83.663468 93.813642 1.163499 14.895245-9.965979 27.928073-24.874527 29.103852C726.084355 358.809015 725.37111 358.835621 724.655819 358.835621z" p-id="2909" fill="#707070"></path></svg>技能</i>
+              <div class="html">
+                  <i>HTML:</i> 
+                  <div class="long">
+                      <div class="hm"></div>
+                  </div>
+              </div>
+              <div class="html">
+                 <i>Css:</i>
+                  <div class="long">
+                      <div class="css"></div>
+                  </div>
+              </div>
+              <div class="html">
+                 <i>Java Script:</i>
+                  <div class="long">
+                      <div class="java"></div>
+                  </div>
+              </div>
+              <div class="html">
+                  <i>Jquery:</i>
+                  <div class="long">
+                      <div class="query"></div>
+                  </div>
+              </div>
+              <div class="html">
+                  <i>Vue:</i>
+                  <div class="long">
+                      <div class="vue"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="right">
+              <i>优点:</i>
+              <p>热爱集体，认真工作一丝不苟，困难面前永不言败。善良，对真心朋友真诚以待，对别人的优点和技能能够虚心学习。有计划，比较勤快。乐观、为他人着想。节约、诚实、诚信、孝顺、自力更生、坚定、乐于助人、勤奋、坚持</p>
+              <i>缺点:</i>
+              <p>懒</p>
+          </div>
+      </div>
   </div>
 </template>
-<script>
-  export default{
-    name:'CV',
-  }
-</script>
-<style>
 
+<script>
+export default {
+  name: "cv",
+  computed: {
+    cv() {
+      return this.$store.state.cv.all;
+    }
+  }
+};
+</script>
+
+<style scoped>
+.wp {
+  margin: 0 auto;
+  padding: 50px 0;
+  background-image: url(../assets/bg.jpeg);
+}
+.body {
+  width: 750px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 7px 14px 44px 2px #002;
+  margin: 0 auto;
+  overflow: hidden;
+}
+h1 {
+  margin-left: 30px;
+  padding-top: 30px;
+  font-size: 20px;
+}
+h2 {
+  margin-left: 30px;
+}
+.left {
+  float: left;
+}
+.left > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+.min,
+.right {
+  margin-top: 30px;
+  margin-left: 100px;
+  float: left;
+}
+.right > p {
+  width: 200px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.min > i > svg {
+  width: 40px;
+  height: 40px;
+}
+.min > i,
+.right > i {
+  font-size: 26px;
+}
+.html {
+  margin-top: 15px;
+}
+.html > .long {
+  width: 150px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(196, 196, 196);
+}
+.hm {
+  width: 120px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #000;
+}
+.css {
+  width: 130px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #000;
+}
+.java {
+  width: 110px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #000;
+}
+.query {
+  width: 140px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #000;
+}
+.vue {
+  width: 10px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #000;
+}
 </style>
